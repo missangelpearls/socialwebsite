@@ -1,0 +1,53 @@
+<div class="pad100"></div>
+<section>
+    <div class="container card">
+        <div style="padding:40px">
+        <h2>Hi {{user.name}}, <small>Create Your Profile</small></h2>
+        <div class="spacer-sm"></div>
+        <div class="row">
+            <div class="col-md-8">
+                       <form method="post" action="/profile/create">
+    <div class="form-group">
+        <label >Which Country you're from ?</label>
+        <input name="country" type="text" class="form-control"   placeholder="Ex: USA" required>
+        
+    </div>
+    <div class="form-group">
+        <label>Which State you're from ?</label>
+        <input name="state" type="text" class="form-control"  placeholder="Ex: California" required>
+    </div>
+    <div class="form-group">
+        <label >Which City you're from?</label>
+        <input name="city" type="text" class="form-control"  placeholder="Ex: Las Vegas" required>
+    </div>
+    <div class="form-group">
+        <label>Languages You know : </label>
+        <input name="languages" type="text" class="form-control"  placeholder="Ex: English, Spanish" required>
+    </div>
+    <div class="form-group">
+        <label> Host or Traveller or Both ?  </label>
+         <select name="hostortraveller" type="text" class="form-control" multiple required>
+         <option>Host</option>
+         <option>Traveller</option>
+         <option>Both</option>
+         </select>
+    </div>
+    <div class="form-group">
+        <label> Your Interests ?  </label>
+         <input name="interests" type="text" class="form-control" placeholder="Tour Guiding or want to learn new sign language or looking for stay  " required>
+        
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Create Profile</button>
+</form>
+            </div>
+            <div class="col-md-4">
+                <img class="img-thumbnail" width="200" src="https://graph.facebook.com/{{user.facebook_id}}/picture?height=200&width=200" alt="">
+            </div>
+        </div>
+</div>
+    </div>
+</section>
+
+<div class="spacer"></div>

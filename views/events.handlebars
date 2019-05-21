@@ -1,0 +1,35 @@
+{{!-- <section style="padding-top:120px;padding-bottom:250px;"> --}}
+<div class = "container">
+<br><br><br>
+
+
+     <p>
+        <a class="btn btn-primary btn-large" href="/events/create">Add new Event</a>  
+     </p>
+     </div>
+
+</header>
+  <div class = "row" style="display:flex; flex-wrap:wrap;">
+     {{#each events}}  
+     <div class="col-md-3 col-sm-6">
+        <div class = "thumbnail">          
+               <img src = "{{img}}">
+                    <div class="caption" style="text-align:center">
+                     <h3>{{event_name}} </h3>
+                     </div>
+                     <p>{{date}} at {{location}}</p>  
+                     <p>{{description}}</p>
+                     
+               
+               <p>
+                
+                   {{#ifEquals user_guid ../user.guid}}   
+                   <a href="/events/{{id}}/edit" class="btn btn-primary btn-large">Edit</a> 
+                   {{/ifEquals}} 
+               </p>
+          </div>
+      </div>
+      {{/each}}   
+   
+ 
+</div>

@@ -1,0 +1,51 @@
+<div style="padding-top:100px"></div>
+<div class="container">
+    <div style="width: 1000px;height: 900px;" id="chartdiv"></div>
+</div>
+
+
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+
+<!-- Chart code -->
+<script>
+var map = AmCharts.makeChart( "chartdiv", {
+
+  "type": "map",
+  "theme": "light",
+  "projection": "miller",
+
+  "dataProvider": {
+    "map": "worldLow",
+    "getAreasFromMap": true
+  },
+  "areasSettings": {
+    "autoZoom": true,
+    "selectedColor": "#CC0000"
+  },
+  "smallMap": {},
+  "export": {
+    "enabled": false,
+    "position": "bottom-right"
+  }
+} );
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

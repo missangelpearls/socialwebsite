@@ -1,0 +1,38 @@
+
+    <section class="profile-0">
+        <div class="container">
+            <div class="box">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="img-thumbnail" src="https://graph.facebook.com/{{profile.facebook_id}}/picture?height=200&width=200" alt="" width="100%">
+                    </div>
+                     <div class="col-md-9">
+                        
+                         <h2>Hi, I'm {{profile.name}}</h2>
+                        <p style="font-family:'Capriola', sans-serif"> <i  class="fas fa-map-marker"></i>  Lives in {{profile.city}}, {{profile.country}}</p>
+                        <p style="font-family:'Capriola', sans-serif" ><i class="fas fa-sign-language"></i> Knows {{profile.languages}}</p>
+                         <p><span class="badge badge-primary">{{profile.hostortraveller}}</span></p>
+                         <a href="#" style="font-family:'Capriola', sans-serif" class="btn btn-secondary"> <i class="far fa-comment-alt"></i> Message </a>
+                         <div class="spacer-sm"></div>
+                         
+                    </div>
+                </div>
+                
+                <div class="spacer-sm"></div>
+            
+              <div class="empty-section">
+                <hr style="margin:8px auto">
+
+                <span class="label label-default"> {{profile.interests}}</span>
+
+
+                  <h3 class="text-center"><i class="fas fa-exclamation-circle"></i>No Reviews Yet</h3>
+              </div>
+
+              <div class="spacer-sm"></div>
+            
+            </div>
+        </div>
+    </section>
+
+

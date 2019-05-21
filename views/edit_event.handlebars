@@ -1,0 +1,43 @@
+<section>
+  <div class="spacer"></div>
+
+<h2>Edit or Delete Event</h2>
+
+  <div class="container card">
+ <form method="post" action="/events/{{event.id}}/edit">
+    <div class="form-group">
+    <label for="event_name"> Name : {{event.event_name}} </label>
+    </div>
+    
+ <div class="form-group">
+    <label for="event_name">Event Description :</label>
+    
+     <textarea name="desc" cols="30" rows="10" required>{{event.description}}</textarea>
+     
+    </div>
+
+<div class="form-group">
+    <label for="imageurl"> Image URL : </label>
+    <input type="text" class="form-control-file"  name="img" value = " {{event.img}}">
+   
+</div>
+
+<div class="form-group">
+    <label for="date"> Happens on : </label>
+     <input type="datetime-local" class="form-control-file"  name="date" value= "{{event.date}}">
+    
+<div class="form-group">
+    <label for="location"> Location: </label>
+    <input type="text" class="form-control-file"  name="loc" value="{{event.location}}">
+</div>
+
+{{#ifEquals event.user_guid user.guid}}
+ <button type="submit" class="btn btn-primary"> Update </button>
+<form id="delete-form" action="/events/{{user_guid}}?method=DELETE" method="POST">
+ <button type="submit" class="btn btn-warning"> Delete </button>  
+ </form>
+ {{/ifEquals}}
+</form>
+
+</div>
+</section>

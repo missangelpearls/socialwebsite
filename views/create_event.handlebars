@@ -1,0 +1,38 @@
+<section style="padding-top:120px">
+<h2>Create Event</h2>
+
+  <div class="container card">
+ <form method="post" action="/events/create">
+    <div class="form-group">
+    <label for="event_name">Event Name : </label>
+     <input name="event_name" type="text" class="form-control"  placeholder="Ex: Social Party" required>
+    </div>
+
+    
+ <div class="form-group">
+    <label for="desc">Event Description :</label>
+   <textarea name="desc" cols="30" rows="10" required>{{event.description}}</textarea>
+     
+    </div>
+
+<div class="form-group">
+    <label for="imageurl"> Image URL : </label>
+    <input type="text" class="form-control-file" placeholder="Use Pinterest Or Unsplash or Google Images to paste URL" name="img">
+</div>
+
+<div class="form-group">
+    <label for="location"> Happens on: </label>
+    <input type="datetime-local" class="form-control-file"  name="date" required>
+</div>
+
+<div class="form-group">
+    <label for="location"> Location: </label>
+    <input type="text" class="form-control-file"  name="loc" required>
+</div>
+
+
+ <button type="submit" class="btn btn-primary"> Create a Event </button>
+</form>
+
+</div>
+</section>
