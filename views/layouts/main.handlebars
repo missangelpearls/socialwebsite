@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmallWorldThat</title>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
 
+    <nav class="navbar navbar-expand-lg navbar-light navbart">
+<div class="container">
+      {{#if user}}
+      <a class="navbar-brand" href="/home"><img src="/img/logo.png" alt="smallworldthat logo" width="60"></a>
+      {{else}}
+      <a class="navbar-brand" href="/"><img src="/img/logo.png" alt="smallworldthat logo" width="60"></a>
+      {{/if}}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link mr10" href="/connect"> Connect </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link mr10" href="/share"> Share </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link mr10" href="/explore"> Explore </a>
+      </li>
+      
+
+      {{#if user}} 
+      <li class="nav-item">
+        <a class="nav-link mr10" href="/profile/{{user.username}}"> @{{user.n}} </a>  
+      </li>
+      {{/if}}
+     
+     
+      <li class="nav-item mr10">
+        {{#if user}}
+         {{!-- <a style="background:rgb(214, 95, 48)" class="btn btn-primary" href="#"> Logout </a> --}}
+        <a style="background:rgb(214, 95, 48)" class="btn btn-primary" href="/logout"> Logout </a>
+        {{else}}
+        <a style="background:rgb(214, 95, 48)" class="btn btn-primary" href="/auth"> Log In </a>
+       
+        {{/if}}
+      </li>
+    </ul>
+   
+  </div>
+</div>    
+</nav>
+
+
+
+    {{{body}}}
+
+        
+        <footer>
+        <div class="container">
+           <div class="spacer-sm"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>SmallWorldThat&copy; All Rights Reserved.</p>
+                 
+                    <p><a href="/privacy-policy">Privacy Policy</a></p>
+                </div>
+
+            <a href="https://www.facebook.com/smallworldthat/"><i class="fa fa-facebook fa-2x"></i></a>
+             <a href="https://twitter.com/smallworldthat/"><i class="fa fa-twitter fa-2x"></i></a>
+              <a href="https://www.youtube.com/watch?v=5IOv9y4XxzQ"><i class="fa fa-youtube fa-2x"></i></a>
+               <a href="https://www.instagram.com/smallworldthat/"><i class="fa fa-instagram fa-2x"></i></a>
+ 
+
+            </div>
+
+        </div>
+    </footer>
+    <script type="text/javascript">
+      if (window.location.hash == '#_=_'){
+          if (history.replaceState) {
+              var cleanHref = window.location.href.split('#')[0];
+              history.replaceState(null, null, cleanHref);
+          } else {
+              window.location.hash = '';
+          }
+      }
+   </script>
+    
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/css/all.css"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+
+</body>
+</html>
